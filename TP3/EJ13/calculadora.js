@@ -27,7 +27,9 @@ function borrar_todo(){
 }
 
 function igualar(){
-    operation_display.innerText = document.getElementById("resultado_display").innerText;
+    if (!document.getElementById("resultado_display").innerText.split(" ").includes("Error")){
+        operation_display.innerText = document.getElementById("resultado_display").innerText;
+    }
 }
 
 function parcer() {
@@ -126,12 +128,8 @@ function evaluador(operacion){
             switch(operacion[i]){
                 case "-":
                     n2 = stack.pop();
-                    // console.log(`n1: ${n1} -> ${typeof n1}`);
                     n1 = stack.pop();
-                    // console.log(`n2: ${n2} -> ${typeof n2}`);
-                    // console.log(`${n1-n2}`);
                     stack.push(n1-n2);
-                    // console.log(`resultado de la cuenta ${stack}`);
                     break;
                 case "+":
                     n2 = stack.pop();
@@ -168,7 +166,6 @@ function evaluador(operacion){
         }
     }
     if (!errores){
-        // console.log(stack);
         resultado = ""+stack.pop();
     }
 
@@ -183,7 +180,8 @@ function mostrar_resultado(){
         } else {
             document.getElementById("resultado_display").innerText = resultado;
         }
-        
+    }else if (resultado.split(" ").includes("Error")){
+        document.getElementById("resultado_display").innerText = resultado;
     }
 }
 
