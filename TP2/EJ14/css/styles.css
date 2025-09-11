@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)),
+        url('../recursos/cultu.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: linear-gradient(135deg, #1a4b8c 0%, #d32f2f 100%);
+    color: white;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.club-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: start;
+}
+
+.club-media {
+    text-align: center;
+}
+
+.club-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 5px solid #f5f5f5;
+}
+
+.club-media iframe {
+    width: 100%;
+    min-height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.club-info {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.club-info h2 {
+    color: #1a4b8c;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff9800;
+}
+
+.info-contacto {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.categorias-section {
+    background: linear-gradient(to right, #1a4b8c, #d32f2f);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.categorias {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.categorias-section p {
+    padding: 5px 0;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    color: #eee;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #1a4b8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.welcome-section h2 {
+    color: #1a4b8c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+h2 {
+    color: #1a4b8c;
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 5px;
+}
+
+.degradado-radial {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 200px;
+    margin: 2px;
+    transition: transform 0.3s;
+}
+
+.degradado-radial:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.degradado-radial.cacb {
+    background: radial-gradient(white, red);
+}
+
+.degradado-radial.caca {
+    background: radial-gradient(white, #011e7a);
+}
+
+.degradado-radial.csi {
+    background: radial-gradient(white, #e21e24);
+}
+
+.degradado-radial.pfc {
+    background: radial-gradient(white, black);
+}
+
+.degradado-radial.fco {
+    background: radial-gradient(white, #016525);
+}
+
+.contenedor-banderas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}

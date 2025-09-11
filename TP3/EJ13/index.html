@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container-sm ">
+        <div class="row">
+            <div class="col-4 text-center"><h1>Calculadora Basica</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-4 bg-dark text-white">
+                <p id="operation_display" class="w-100 text-end fs-3 fw-bold", style="height: 50px;"></p>
+                <p id="resultado_display" class="w-100 text-end fs-3 fw-bold" style="height: 50px;"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 p-0">
+                <button class="btn btn-warning p-4 w-100" onclick="borrar_ultimo()">CE</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-warning p-4 w-100" onclick="borrar_todo()">C</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('&not;')">&plusmn;</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('%')">%</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('7')">7</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('8')">8</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('9')">9</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('&divide;')">&divide;</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('4')">4</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('5')">5</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('6')">6</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('&times')">&times;</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('1')">1</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('2')">2</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('3')">3</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('-')">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('0')">0</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-primary p-4 w-100" onclick="concatenar('.')">.</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-success p-4 w-100" onclick="igualar()">=</button>
+            </div>
+            <div class="col-1 p-0">
+                <button class="btn btn-secondary p-4 w-100" onclick="concatenar('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="calculadora.js"></script>
+</body>
+</html>
