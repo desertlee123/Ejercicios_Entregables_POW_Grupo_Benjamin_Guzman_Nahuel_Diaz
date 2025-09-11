@@ -51,7 +51,7 @@ function parcer() {
                 } else {
                     status = "numero";
                 }
-                i--; // Re-evaluate the same character
+                i--;
                 break;
 
             case "numero":
@@ -66,7 +66,7 @@ function parcer() {
                             output_stack.push(parseFloat(number));
                             number = "";
                             status = "nuevo";
-                            i--; // Re-evaluate the same character
+                            i--;
                         }
                         break;
 
@@ -78,7 +78,7 @@ function parcer() {
                             number = "";
                             decimal_status = "entero";
                             status = "nuevo";
-                            i--; // Re-evaluate the same character
+                            i--;
                         }
                         break;
                 }
@@ -98,7 +98,7 @@ function parcer() {
                 } else {
                     operator = "";
                     status = "nuevo";
-                    i--; // Re-evaluate the same character
+                    i--;
                 }
                 break;
         }
