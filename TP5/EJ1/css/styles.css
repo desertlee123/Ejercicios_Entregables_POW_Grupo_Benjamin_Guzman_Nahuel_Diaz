@@ -1,0 +1,10 @@
+.mensaje {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.mensaje-ganador {
+  color: green;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

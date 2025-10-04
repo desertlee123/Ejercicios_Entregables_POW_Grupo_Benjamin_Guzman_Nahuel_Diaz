@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Lotería!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="vh-100 d-flex flex-column justify-content-center align-items-center text-white">
+  <h1 class="mb-5">🎲¡Juego: Lotería!🎲</h1>
+
+  <div class="mb-5">
+    <div class="d-flex gap-2 mb-2">
+      <input type="number" id="input-limite-inferior" placeholder="Límite inferior"
+        class="form-control rounded-5 border-0 py-2 px-3" min="0">
+      <input type="number" id="input-limite-superior" placeholder="Límite superior"
+        class="form-control rounded-5 border-0 py-2 px-3" min="0">
+    </div>
+    <button id="btn-random" class="btn btn-primary w-100 rounded-5 mb-2">🤞¡Random!🤞</button>
+    <button id="btn-reiniciar" class="btn btn-warning w-100 rounded-5">Reiniciar</button>
+  </div>
+
+  <h2 class="mb-2">Número: <span id="resultado-numero-span">-</span></h2>
+
+  <h3 id="mensaje-alerta"></h3>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

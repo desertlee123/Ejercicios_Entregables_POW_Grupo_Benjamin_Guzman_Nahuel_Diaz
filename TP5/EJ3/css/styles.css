@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background: linear-gradient(to right, #F3A183, #EC6F66);
+  display: grid;
+  justify-content: center;
+}
+
+.title,
+.create-user-title {
+  color: white;
+}
+
+img {
+  display: block;
+  border-radius: 100%;
+}
+
+.form-create {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.label-create {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-create {
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  font-family: system-ui;
+  border-radius: 5px;
+}
+
+.input-create:focus {
+  outline: none;
+  border-color: #EC6F66;
+}
+
+.form-group-submit {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input-create-submit {
+  background-color: #EC6F66;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.input-create-submit:hover {
+  background-color: #d55c5a;
+}
+
+.modal-edit-title {
+  margin-top: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.3);
+}
+
+.modal-edit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.modal-form-group-submit {
+  grid-column: 1 / -1;
+  /* Truco para que el contenedor del botón abarque toda la fila */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-edit {
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  font-family: system-ui;
+  border-radius: 5px;
+}
+
+.input-edit:focus {
+  outline: none;
+  border-color: #EC6F66;
+}
+
+.input-edit[readonly] {
+  background-color: #f0f0f0;
+}
+
+.label-edit {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-edit-submit {
+  background-color: #EC6F66;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.input-edit-submit:hover {
+  background-color: #d55c5a;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-cancel:hover {
+  background-color: #b3b3b3;
+}
+
+.control-container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.input-search {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  font-family: system-ui;
+}
+
+.select-filter {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  font-family: system-ui;
+  margin-left: 10px;
+}
+
+.select-filter:focus {
+  border-color: #4CAF50;
+}
+
+.input-search:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.table-users {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 70px rgba(0, 0, 0, 0.3);
+}
+
+.table-users thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table-users th,
+.table-users td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Truquito para eliminar el borde de la izquierda y la derecha de las celdas */
+.table-users th:first-child,
+.table-users td:first-child {
+  border-left: none;
+}
+
+.table-users th:last-child,
+.table-users td:last-child {
+  border-right: none;
+}
+
+/* Pequeña tramoya para simular que no hay borde superior de la primera fila */
+.table-users thead tr {
+  border-top: 2px solid #4CAF50;
+}
+
+.table-users tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.no-results-row {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+.button-edit,
+.button-delete {
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button-edit {
+  background-color: #007bff;
+  margin-right: 5px;
+}
+
+.button-edit:hover {
+  background-color: #0056b3;
+}
+
+.button-delete {
+  background-color: #f44336;
+}
+
+.button-delete:hover {
+  background-color: #da190b;
+}
+
+.select-sort,
+.select-page-size {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  font-family: system-ui;
+  margin-left: 10px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.select-sort:focus,
+.select-page-size:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.pagination-btn:hover:enabled {
+  background-color: #479049;
+}
+
+.pagination-btn:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+  border-color: #ccc;
+  opacity: 0.6;
+}
+
+#page-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}

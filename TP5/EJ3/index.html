@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Usuarios</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <h1 class="title">CRUD de Usuarios</h1>
+
+  <!-- Formulario principal para agregar un usuario -->
+  <h2 class="create-user-title">Agregar nuevo usuario</h2>
+  <form class="form-create" id="form" action="#">
+    <div class="form-group">
+      <label class="label-create" for="email">Email:</label>
+      <input class="input-create" type="email" id="email" placeholder="Email" required />
+    </div>
+    <div class="form-group">
+      <label class="label-create" for="nombre-input">Nombre:</label>
+      <input class="input-create" type="text" id="nombre-input" placeholder="Nombre" required />
+    </div>
+    <div class="form-group">
+      <label class="label-create" for="apellido-input">Apellido:</label>
+      <input class="input-create" type="text" id="apellido-input" placeholder="Apellido" required />
+    </div>
+    <div class="form-group">
+      <label class="label-create" for="avatar-input">Avatar (URL):</label>
+      <input class="input-create" type="url" id="avatar-input" placeholder="URL del Avatar" required />
+    </div>
+    <div class="form-group-submit">
+      <input class="input-create-submit" type="submit" id="input-submit" value="Agregar" />
+    </div>
+  </form>
+
+  <!-- Modal con formulario para editar los campos -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 class="modal-edit-title">Editar Usuario</h2>
+      <form class="modal-edit-form" id="edit-form" action="#">
+        <div class="modal-form-group">
+          <label class="label-edit" for="edit-id">ID:</label>
+          <input class="input-edit" type="number" id="edit-id" placeholder="ID" readonly />
+        </div>
+        <div class="modal-form-group">
+          <label class="label-edit" for="edit-email">Email:</label>
+          <input class="input-edit" type="email" id="edit-email" placeholder="Email" required />
+        </div>
+        <div class="modal-form-group">
+          <label class="label-edit" for="edit-nombre">Nombre:</label>
+          <input class="input-edit" type="text" id="edit-nombre" placeholder="Nombre" required />
+        </div>
+        <div class="modal-form-group">
+          <label class="label-edit" for="edit-apellido">Apellido:</label>
+          <input class="input-edit" type="text" id="edit-apellido" placeholder="Apellido" required />
+        </div>
+        <div class="modal-form-group">
+          <label class="label-edit" for="edit-avatar">Avatar (URL):</label>
+          <input class="input-edit" type="url" id="edit-avatar" placeholder="URL del Avatar" required />
+        </div>
+        <div class="modal-form-group-submit">
+          <input class="input-edit-submit" type="submit" id="edit-submit" value="Actualizar" />
+          <button class="btn-cancel" type="button" id="close-modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Controles para buscar, filtrar y paginar los resultados -->
+  <div class="control-container">
+    <input class="input-search" type="text" id="search-input" placeholder="Buscar por nombre..." />
+
+    <select id="user-filter" class="select-filter">
+      <option value="">Filtrar por userId (todos)</option>
+    </select>
+
+    <select id="sort" class="select-sort">
+      <option value="id_asc">Orden: ID ↑</option>
+      <option value="id_desc">Orden: ID ↓</option>
+    </select>
+
+    <select id="page-size" class="select-page-size">
+      <option value="1">1/pg</option>
+      <option value="3" selected>3/pg</option>
+      <option value="6">6/pg</option>
+    </select>
+  </div>
+
+  <!-- Tabla donde se muestran los usuarios -->
+  <table class="table-users" id="usuarios-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Avatar</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <tr class="no-results-row" id="no-results-row">
+        <td colspan="6">No hay usuarios para mostrar.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Sección para la paginación -->
+  <div class="pagination-container">
+    <button id="prev-btn" class="pagination-btn">Anterior</button>
+    <span id="page-info">Página 1 de 1</span>
+    <button id="next-btn" class="pagination-btn">Siguiente</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
